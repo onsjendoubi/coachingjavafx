@@ -1,6 +1,6 @@
 package GUI;
 
-
+////
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.WriterException;
 import org.controlsfx.control.Notifications;
