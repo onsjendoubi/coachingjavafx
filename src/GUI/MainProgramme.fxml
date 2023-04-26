@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="950.0" style="-fx-background-color: #d1e0e0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.MainProgrammeController">
+   <children>
+      <Button layoutX="94.0" layoutY="485.0" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="55.0" style="-fx-background-color: #66ccff;" text="Add" />
+      <Button fx:id="remove" layoutX="188.0" layoutY="485.0" mnemonicParsing="false" onAction="#onremove" style="-fx-background-color: #f52020;" text="Delete" />
+      <Label layoutX="399.0" layoutY="14.0" mouseTransparent="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="39.0" prefWidth="152.0" text="Programme" textFill="#cd1111" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabview" layoutX="286.0" layoutY="100.0" prefHeight="420.0" prefWidth="639.0">
+        <columns>
+            <TableColumn fx:id="idT" prefWidth="49.0" text="id" />
+          <TableColumn fx:id="nomT" onEditCommit="#onEditNom" prefWidth="140.0" text="Nom" />
+          <TableColumn fx:id="typeT" prefWidth="96.0" text="Type" />
+            <TableColumn fx:id="dureeT" onEditCommit="#onEditDuree" prefWidth="72.0" text="Duree" />
+            <TableColumn fx:id="likesT" prefWidth="73.0" text="Likes" />
+            <TableColumn fx:id="MediaT" onEditCommit="#onEditMedia" prefWidth="207.0" text="Media" />
+        </columns>
+      </TableView>
+      <TextField fx:id="nom" layoutX="122.0" layoutY="157.0" />
+      <TextField fx:id="duree" layoutX="121.0" layoutY="279.0" />
+      <Button layoutX="140.0" layoutY="448.0" mnemonicParsing="false" onAction="#upload" style="-fx-background-color: #3d9a31;" text="Upload" />
+      <ComboBox fx:id="type" layoutX="122.0" layoutY="222.0" prefWidth="150.0" />
+      <ImageView fx:id="imgv" fitHeight="114.0" fitWidth="194.0" layoutX="52.0" layoutY="324.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="58.0" layoutY="161.0" text="Nom" />
+      <Label layoutX="52.0" layoutY="226.0" prefHeight="17.0" prefWidth="41.0" text="Type" />
+      <Label layoutX="51.0" layoutY="283.0" prefHeight="17.0" prefWidth="41.0" text="Duree" />
+      <Label fx:id="imgurl" layoutX="8.0" layoutY="421.0" prefHeight="17.0" prefWidth="276.0" />
+   </children>
+</AnchorPane>

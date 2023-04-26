@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxWidth="800.0" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ProgFrontController">
+   <children>
+      <TextField fx:id="searchb" layoutX="147.0" layoutY="162.0" onKeyTyped="#onSearch" prefHeight="25.0" prefWidth="374.0" />
+      <ImageView fitHeight="53.0" fitWidth="77.0" layoutX="533.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/search_tool.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="256.0" layoutY="69.0" prefHeight="75.0" prefWidth="289.0" text="Programs">
+         <font>
+            <Font size="41.0" />
+         </font>
+      </Label>
+      <ScrollPane fx:id="panev" layoutX="49.0" layoutY="202.0" prefHeight="574.0" prefWidth="702.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+         </content>
+      </ScrollPane>
+      <ComboBox fx:id="orderby" layoutX="601.0" layoutY="162.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

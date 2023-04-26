@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="950.0" style="-fx-background-color: #d1e0e0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.MainArticleController">
+   <children>
+      <Button layoutX="104.0" layoutY="495.0" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="55.0" style="-fx-background-color: #66ccff;" text="Add" />
+      <Button fx:id="remove" layoutX="198.0" layoutY="495.0" mnemonicParsing="false" onAction="#onremove" style="-fx-background-color: #f52020;" text="Delete" />
+      <Label layoutX="409.0" layoutY="24.0" mouseTransparent="true" nodeOrientation="LEFT_TO_RIGHT" prefHeight="39.0" prefWidth="152.0" text="Article" textFill="#cd1111" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Button layoutX="150.0" layoutY="458.0" mnemonicParsing="false" onAction="#upload" style="-fx-background-color: #3d9a31;" text="Upload" />
+      <ImageView fx:id="imgv" fitHeight="114.0" fitWidth="194.0" layoutX="62.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="62.0" layoutY="258.0" text="Sujet" />
+      <Label layoutX="62.0" layoutY="175.0" text="Titre" />
+      <Label layoutX="90.0" layoutY="391.0" />
+      <TableView fx:id="tabview" layoutX="286.0" layoutY="100.0" prefHeight="420.0" prefWidth="639.0">
+        <columns>
+          <TableColumn fx:id="idT" prefWidth="75.0" text="Id" />
+            <TableColumn fx:id="titreT" onEditCommit="#onChangeTitre" prefWidth="140.0" text="Titre" />
+          <TableColumn fx:id="sujetT" onEditCommit="#onChangeSujet" prefWidth="260.0" text="Sujet" />
+            <TableColumn fx:id="imageT" prefWidth="152.0" text="Image" />
+        </columns>
+      </TableView>
+      <TextField fx:id="titre" layoutX="117.0" layoutY="171.0" />
+      <TextField fx:id="sujet" layoutX="117.0" layoutY="254.0" />
+      <Label fx:id="imgurl" layoutX="5.0" layoutY="425.0" prefHeight="17.0" prefWidth="261.0" />
+      <TextField fx:id="search" layoutX="711.0" layoutY="63.0" onKeyTyped="#onsearch" prefHeight="25.0" prefWidth="210.0" />
+   </children>
+</AnchorPane>

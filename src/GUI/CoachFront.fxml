@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxWidth="900.0" prefHeight="800.0" prefWidth="831.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.CoachFrontController">
+   <children>
+      <TextField fx:id="searchb" layoutX="228.0" layoutY="134.0" onKeyTyped="#onSearch" prefHeight="25.0" prefWidth="374.0" />
+      <ImageView fitHeight="53.0" fitWidth="77.0" layoutX="618.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/search_tool.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="328.0" layoutY="34.0" prefHeight="75.0" prefWidth="149.0" text="Coachs">
+         <font>
+            <Font size="41.0" />
+         </font>
+      </Label>
+      <ScrollPane fx:id="panev" layoutX="66.0" layoutY="191.0" maxWidth="700.0" prefHeight="574.0" prefWidth="1349.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
